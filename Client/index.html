@@ -1,7 +1,17 @@
 </!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 	<title>Cadastro</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cadastro.css" rel="stylesheet">
 </head>
 <script>
 	function exportaJSON(form) {
@@ -15,13 +25,15 @@
 	}
 </script>
 <body>
-	<form onsubmit="return exportaJSON(this);">
-  		Nome:<br>
-  			<input type="text" name="nome"><br>
-  		Sobrenome:<br>
-  			<input type="text" name="sobrenome"><br>
-  		<input type="submit" value="Enviar">
+<div class="container">
+	<form class="form-signin" onsubmit="return exportaJSON(this);">
+			<label>Nome</label>
+  			<input type="text" class="form-control" placeholder="Ex: João" name="nome"><br>
+  			<label>Sobrenome</label>
+  			<input type="text" class ="form-control" placeholder="Ex: Pereira da Silva" name="sobrenome"><br>
+  		<button type="submit" class="btn btn-primary">Enviar</button>
 	</form> 
+</div>
 	<pre id="saida"></pre>
 </body>
 </html>
