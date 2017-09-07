@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>Cadastro</title>
+    <title>Cadastro</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/cadastro.css" rel="stylesheet">
 </head>
 <script>
-	function exportaJSON(form) {
-		var json={
-			"nome":form.nome.value,
-			"sobrenome":form.sobrenome.value
-		};
-		var html=JSON.stringify(json,0,4);
-		document.getElementById('saida').innerHTML=html;
-		return false;
-	}
+    function exportaJSON(form) {
+        var json={
+            "nome":form.nome.value,
+            "sobrenome":form.sobrenome.value
+        };
+        var html=JSON.stringify(json,0,4);
+        document.getElementById('saida').innerHTML=html;
+        return false;
+    }
 </script>
 <body>
 <div class="container">
-	<form class="form-signin" onsubmit="return exportaJSON(this);">
-			<label>Nome</label>
-  			<input type="text" class="form-control" placeholder="Ex: João" name="nome"><br>
-  			<label>Sobrenome</label>
-  			<input type="text" class ="form-control" placeholder="Ex: Pereira da Silva" name="sobrenome"><br>
-  		<button type="submit" class="btn btn-primary">Enviar</button>
-	</form> 
+    <form class="form-signin" onsubmit="return exportaJSON(this);">
+            <label>Nome</label>
+            <input type="text" class="form-control" placeholder="Ex: João" name="nome"><br>
+            <label>Sobrenome</label>
+            <input type="text" class ="form-control" placeholder="Ex: Pereira da Silva" name="sobrenome"><br>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form> 
 </div>
-	<pre id="saida"></pre>
+    <pre id="saida"></pre>
 </body>
 </html>
