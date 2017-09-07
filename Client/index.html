@@ -1,7 +1,27 @@
- <form>
-  Nome:<br>
-  <input type="text" name="firstname"><br>
-  Sobrenome:<br>
-  <input type="text" name="lastname"><br>
-  <input type="submit" value="Enviar">
-</form> 
+</!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro</title>
+</head>
+<script>
+	function exportaJSON(form) {
+		var json={
+			"nome":form.nome.value,
+			"sobrenome":form.sobrenome.value
+		};
+		var html=JSON.stringify(json,0,4);
+		document.getElementById('saida').innerHTML=html;
+		return false;
+	}
+</script>
+<body>
+	<form onsubmit="return exportaJSON(this);">
+  		Nome:<br>
+  			<input type="text" name="nome"><br>
+  		Sobrenome:<br>
+  			<input type="text" name="sobrenome"><br>
+  		<input type="submit" value="Enviar">
+	</form> 
+	<pre id="saida"></pre>
+</body>
+</html>
